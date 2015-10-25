@@ -63,10 +63,5 @@ public class MainActivity extends Activity {
 		super.onDestroy();
 		Log.d("MainActivity", "onDstroy");
 	}
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
 
 }
