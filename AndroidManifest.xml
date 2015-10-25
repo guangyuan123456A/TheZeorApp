@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.thezeorapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.thezeorapp.MainActivity"
+            android:label="@string/app_name" 
+            android:configChanges="keyboardHidden|orientation|screenSize"> //4屏幕大于3寸，需加screenSize才能是横竖屏变化时不ondestory
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />		//3,告诉android，这是主界面
+
+                <category android:name="android.intent.category.LAUNCHER" />	//4，告诉android，把这个app放到列表里
+            </intent-filter>
+        </activity>
+        <activity 					
+            android:name="com.example.thezeorapp.dakaiactivity" />			//5，被打开的app，最简单的，只需要在配置节点时，把全类名写上
+            				
+    </application>
+
+</manifest>
